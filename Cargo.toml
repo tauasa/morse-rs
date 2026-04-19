@@ -1,0 +1,24 @@
+[package]
+name        = "morse"
+version     = "2.0.0"
+edition     = "2021"
+description = "Morse Code Converter CLI – encode, decode, and play audio tones"
+authors     = ["Tauasa Timoteo"]
+repository  = "https://github.com/tauasa/morse"
+license     = "MIT"
+
+[[bin]]
+name = "morse"
+path = "src/main.rs"
+
+[dependencies]
+# Argument parsing
+clap = { version = "4", features = ["derive"] }
+
+# Audio playback (pure Rust, no C deps required on most platforms)
+rodio = { version = "0.19", default-features = false, features = ["wav"] }
+
+[profile.release]
+opt-level   = 3
+strip       = true   # strip debug symbols for smaller binary
+lto         = true
