@@ -1,9 +1,7 @@
-# Morse — Rust CLI
+# Morse Code Converter/Player in Rust
 
 A command-line Morse code converter written in Rust.  
 Encode plain text to Morse, decode Morse to text, and optionally play audio tones.
-
-**Repository:** https://github.com/tauasa/morse-rs
 
 ---
 
